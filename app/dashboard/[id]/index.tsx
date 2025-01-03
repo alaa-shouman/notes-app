@@ -48,7 +48,7 @@ const NotesPage = () => {
         value={additionalText}
         onChangeText={handleTextChange}
         textColor="#0f172a"
-        style={{ fontSize: "1.5rem" }}
+        style={{ fontSize: 24 }}
       />
     </View>
   );
