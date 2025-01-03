@@ -2,7 +2,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Note {
   id: string;
-  content: string;
+  title: string;
+  content?: string;
   timestamp: string;
 }
 
@@ -20,9 +21,9 @@ const notesSlice = createSlice({
   reducers: {
     addNote: (state, action: PayloadAction<string>) => {
       state.notes.push({
-        id: Date.now().toString(), 
-        content: action.payload,
-        timestamp: new Date().toLocaleString(), 
+        id: Date.now().toString(),
+        title: action.payload,
+        timestamp: new Date().toLocaleString(),
       });
     },
     deleteNote: (state, action: PayloadAction<string>) => {

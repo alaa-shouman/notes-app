@@ -13,20 +13,17 @@ export default function RootLayout() {
         <SafeAreaView className="flex-1">
           <StatusBar
             animated={true}
-            backgroundColor="transparent"
+            backgroundColor="#fef9c3"
             barStyle={"dark-content"}
             translucent={true}
           />
-          <Stack screenOptions={{headerShown: false}}>
+          <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="index" options={{ headerShown: false }} />
             <Stack.Screen
               name="dashboard/index"
               options={{ headerShown: false }}
             />
-            <Stack.Screen
-              name="dashboard/[id]/index"
-              
-            />
+            <Stack.Screen name="dashboard/[id]/index" />
           </Stack>
         </SafeAreaView>
       </PaperProvider>

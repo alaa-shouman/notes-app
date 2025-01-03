@@ -12,17 +12,17 @@ export default function HomePage() {
   };
 
   return (
-      <View className="flex items-center justify-center h-full bg-[#eee] px-14">
-        <Text style={styles.title}>Welcome!</Text>
-        <Button
-          mode="contained"
-          onPress={handleLogin}
-          className="bg-red-500 text-red-50"
-          labelStyle={{ color: "white" }}
-        >
-          Login
-        </Button>
-      </View>
+    <View className="flex items-center justify-center h-full bg-yellow-100 px-14">
+      <Text style={styles.title}>Welcome!</Text>
+      <Button
+        mode="contained"
+        onPress={handleLogin}
+        labelStyle={{ color: "white" }}
+        buttonColor="#0f172a"
+      >
+        Login
+      </Button>
+    </View>
   );
 }
 

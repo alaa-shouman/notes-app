@@ -25,7 +25,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <View className="flex-1 p-4 bg-gray-100">
+    <View className="flex-1 p-4 bg-yellow-100">
       <Text className="text-2xl font-bold mb-4 text-center">
         Notes Dashboard
       </Text>
@@ -36,7 +36,12 @@ export default function DashboardPage() {
         value={noteInput}
         onChangeText={setNoteInput}
       />
-      <Button mode="contained" onPress={handleAddNote} className="mb-4" buttonColor="#FFD700">
+      <Button
+        mode="contained"
+        onPress={handleAddNote}
+        className="mb-4"
+        buttonColor="#FFD700"
+      >
         Add Note
       </Button>
 
@@ -54,9 +59,9 @@ export default function DashboardPage() {
           >
             <View>
               <Text className="text-lg font-bold text-yellow-900">
-                {item.content.length > 30
-                  ? `${item.content.substring(0, 30)}...`
-                  : item.content}
+                {item.title.length > 30
+                  ? `${item.title.substring(0, 15)}...`
+                  : item.title}
               </Text>
               <Text className="text-sm text-gray-600 mt-1">
                 {item.timestamp}
